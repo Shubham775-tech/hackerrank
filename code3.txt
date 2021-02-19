@@ -1,0 +1,48 @@
+Task
+
+Given a five digit integer, print the sum of its digits.
+
+
+Input Format
+
+The input contains a single five digit number,n .
+
+
+Output Format
+
+Print the sum of the digits of the five digit number.
+
+
+Sample Input 0
+
+10564
+
+Sample Output 0
+
+16
+
+Answer:
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+	
+    int n;
+    int last_num, sum = 0, temp; 
+    scanf("%d", &n);
+    temp = n;
+    
+    while (temp>0)
+    {
+        last_num = temp % 10;
+        sum = sum + last_num;
+        temp = temp / 10;
+    }
+    
+    printf("%d",sum);
+    
+    return 0;
+}
